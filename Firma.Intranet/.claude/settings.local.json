@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Studia/aplikacje internetwe/projekt/Firma/**)",
+      "Bash(powershell -Command \"Expand-Archive -Path 'bootstrap-icons.zip' -DestinationPath 'bi-tmp' -Force; Get-ChildItem bi-tmp -Recurse -Depth 2 | Select-Object FullName\")",
+      "Bash(cp 'C:/Studia/aplikacje internetwe/projekt/Firma/bi-tmp/bootstrap-icons-1.11.3/font/bootstrap-icons.css' __TRACKED_VAR__/)",
+      "Bash(cp 'C:/Studia/aplikacje internetwe/projekt/Firma/bi-tmp/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css' __TRACKED_VAR__/)",
+      "Bash(cp 'C:/Studia/aplikacje internetwe/projekt/Firma/bi-tmp/bootstrap-icons-1.11.3/font/fonts/*.woff' __TRACKED_VAR__/fonts/)",
+      "Bash(cp 'C:/Studia/aplikacje internetwe/projekt/Firma/bi-tmp/bootstrap-icons-1.11.3/font/fonts/*.woff2' __TRACKED_VAR__/fonts/)",
+      "Bash(dotnet build:*)",
+      "Bash(dotnet run:*)",
+      "Bash(echo \"started pid $!\" sleep 8 curl -s -o /dev/null -w \"Index: %{http_code}\\\\n\" http://localhost:5099/ curl -s -o /dev/null -w \"Pracownicy: %{http_code}\\\\n\" http://localhost:5099/Home/Pracownicy curl -s -o /dev/null -w \"Raporty: %{http_code}\\\\n\" http://localhost:5099/Home/Raporty curl -s -o /dev/null -w \"Ustawienia: %{http_code}\\\\n\" http://localhost:5099/Home/Ustawienia curl -s http://localhost:5099/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5099/)",
+      "Read(//tmp/**)",
+      "Bash(powershell -Command \"Get-Process Firma.Intranet -ErrorAction SilentlyContinue | Stop-Process -Force; Get-Process Firma.PortalWWW -ErrorAction SilentlyContinue | Stop-Process -Force; Start-Sleep 2; 'killed'\")",
+      "Bash(echo \"started pid $!\" sleep 12 echo \"---codes---\" curl -s -o /dev/null -w \"Index: %{http_code}\\\\n\" http://localhost:5099/ curl -s -o /dev/null -w \"Pracownicy: %{http_code}\\\\n\" http://localhost:5099/Home/Pracownicy curl -s -o /dev/null -w \"Raporty: %{http_code}\\\\n\" http://localhost:5099/Home/Raporty curl -s -o /dev/null -w \"Ustawienia: %{http_code}\\\\n\" http://localhost:5099/Home/Ustawienia echo \"---sidebar links---\" curl -s http://localhost:5099/)",
+      "Bash(powershell -Command \"Get-Process Firma.Intranet -ErrorAction SilentlyContinue | Stop-Process -Force; Start-Sleep 2; 'killed'\")",
+      "Bash(curl -s -o /dev/null -w \"Index: %{http_code}\\\\n\" http://localhost:5099/)",
+      "Bash(curl -s -o /dev/null -w \"Pracownicy: %{http_code}\\\\n\" http://localhost:5099/Home/Pracownicy)",
+      "Bash(curl -s -o /dev/null -w \"Raporty: %{http_code}\\\\n\" http://localhost:5099/Home/Raporty)",
+      "Bash(curl -s -o /dev/null -w \"Ustawienia: %{http_code}\\\\n\" http://localhost:5099/Home/Ustawienia)",
+      "Bash(powershell -Command \"Get-Process Firma.Intranet -ErrorAction SilentlyContinue | Stop-Process -Force; 'killed'\")"
+    ]
+  }
+}

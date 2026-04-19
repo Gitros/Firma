@@ -1,0 +1,30 @@
+@model Firma.Data.CMS.Strona
+@{ ViewData["Title"] = "Usuń stronę"; }
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card border-danger shadow-sm">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="mb-0"><i class="bi bi-trash me-2"></i>Potwierdzenie usunięcia</h5>
+                </div>
+                <div class="card-body">
+                    <p class="mb-3">Czy na pewno chcesz usunąć tę stronę?</p>
+                    <dl class="row">
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Tytul)</dt>
+                        <dd class="col-sm-8">@Model.Tytul</dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.LinkTytul)</dt>
+                        <dd class="col-sm-8">@Model.LinkTytul</dd>
+                    </dl>
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="IdStrony" />
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-danger"><i class="bi bi-trash me-1"></i>Usuń</button>
+                            <a asp-action="Index" class="btn btn-outline-secondary">Anuluj</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,141 @@
+@{
+    ViewData["Title"] = "Pracownicy";
+    ViewData["Subtitle"] = "Zarządzaj zespołem agentów i pracowników";
+}
+
+<div class="section-h">
+    <div class="d-flex gap-2 align-items-center">
+        <div class="input-group" style="max-width: 320px;">
+            <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+            <input type="text" class="form-control border-start-0" placeholder="Szukaj pracownika..." />
+        </div>
+        <select class="form-select" style="max-width: 180px;">
+            <option>Wszystkie stanowiska</option>
+            <option>Agent</option>
+            <option>Manager</option>
+            <option>Administrator</option>
+        </select>
+    </div>
+    <div class="d-flex gap-2">
+        <button class="btn btn-light"><i class="bi bi-download me-1"></i> Eksport CSV</button>
+        <button class="btn btn-accent"><i class="bi bi-plus-lg me-1"></i> Dodaj pracownika</button>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="panel-head">
+        <h5>Zespół (8)</h5>
+        <span class="text-muted small">Aktualizacja: dziś, 09:42</span>
+    </div>
+    <div class="table-responsive">
+        <table class="table mb-0">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Pracownik</th>
+                    <th>Stanowisko</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                    <th>Sprzedaż (m-c)</th>
+                    <th>Status</th>
+                    <th class="text-end">Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-muted">001</td>
+                    <td><div class="d-flex align-items-center gap-2"><span class="avatar avatar-sm">MW</span><div><div class="fw-semibold">Marcin Wójcik</div><div class="small text-muted">Nowy Sącz</div></div></div></td>
+                    <td>CEO / Założyciel</td>
+                    <td>m.wojcik@nieruchomosciPro.pl</td>
+                    <td>+48 600 100 200</td>
+                    <td><strong>2 850 000 zł</strong></td>
+                    <td><span class="badge-status active">Aktywny</span></td>
+                    <td class="text-end"><button class="btn-icon" title="Edytuj"><i class="bi bi-pencil"></i></button> <button class="btn-icon" title="Wiadomość"><i class="bi bi-envelope"></i></button> <button class="btn-icon danger" title="Usuń"><i class="bi bi-trash"></i></button></td>
+                </tr>
+                <tr>
+                    <td class="text-muted">002</td>
+                    <td><div class="d-flex align-items-center gap-2"><span class="avatar avatar-sm">AK</span><div><div class="fw-semibold">Anna Kowalska</div><div class="small text-muted">Kraków</div></div></div></td>
+                    <td>Dyrektor Sprzedaży</td>
+                    <td>a.kowalska@nieruchomosciPro.pl</td>
+                    <td>+48 600 100 201</td>
+                    <td><strong>3 120 000 zł</strong></td>
+                    <td><span class="badge-status active">Aktywny</span></td>
+                    <td class="text-end"><button class="btn-icon"><i class="bi bi-pencil"></i></button> <button class="btn-icon"><i class="bi bi-envelope"></i></button> <button class="btn-icon danger"><i class="bi bi-trash"></i></button></td>
+                </tr>
+                <tr>
+                    <td class="text-muted">003</td>
+                    <td><div class="d-flex align-items-center gap-2"><span class="avatar avatar-sm">PN</span><div><div class="fw-semibold">Piotr Nowak</div><div class="small text-muted">Nowy Sącz</div></div></div></td>
+                    <td>Główny Prawnik</td>
+                    <td>p.nowak@nieruchomosciPro.pl</td>
+                    <td>+48 600 100 202</td>
+                    <td>—</td>
+                    <td><span class="badge-status away">Urlop</span></td>
+                    <td class="text-end"><button class="btn-icon"><i class="bi bi-pencil"></i></button> <button class="btn-icon"><i class="bi bi-envelope"></i></button> <button class="btn-icon danger"><i class="bi bi-trash"></i></button></td>
+                </tr>
+                <tr>
+                    <td class="text-muted">004</td>
+                    <td><div class="d-flex align-items-center gap-2"><span class="avatar avatar-sm">KZ</span><div><div class="fw-semibold">Katarzyna Zając</div><div class="small text-muted">Kraków</div></div></div></td>
+                    <td>Marketing Manager</td>
+                    <td>k.zajac@nieruchomosciPro.pl</td>
+                    <td>+48 600 100 203</td>
+                    <td>—</td>
+                    <td><span class="badge-status active">Aktywny</span></td>
+                    <td class="text-end"><button class="btn-icon"><i class="bi bi-pencil"></i></button> <button class="btn-icon"><i class="bi bi-envelope"></i></button> <button class="btn-icon danger"><i class="bi bi-trash"></i></button></td>
+                </tr>
+                <tr>
+                    <td class="text-muted">005</td>
+                    <td><div class="d-flex align-items-center gap-2"><span class="avatar avatar-sm">PW</span><div><div class="fw-semibold">Piotr Wiśniewski</div><div class="small text-muted">Nowy Sącz</div></div></div></td>
+                    <td>Agent Senior</td>
+                    <td>p.wisniewski@nieruchomosciPro.pl</td>
+                    <td>+48 600 100 204</td>
+                    <td><strong>1 850 000 zł</strong></td>
+                    <td><span class="badge-status active">Aktywny</span></td>
+                    <td class="text-end"><button class="btn-icon"><i class="bi bi-pencil"></i></button> <button class="btn-icon"><i class="bi bi-envelope"></i></button> <button class="btn-icon danger"><i class="bi bi-trash"></i></button></td>
+                </tr>
+                <tr>
+                    <td class="text-muted">006</td>
+                    <td><div class="d-flex align-items-center gap-2"><span class="avatar avatar-sm">MK</span><div><div class="fw-semibold">Magdalena Kaczmarek</div><div class="small text-muted">Tarnów</div></div></div></td>
+                    <td>Agent</td>
+                    <td>m.kaczmarek@nieruchomosciPro.pl</td>
+                    <td>+48 600 100 205</td>
+                    <td><strong>985 000 zł</strong></td>
+                    <td><span class="badge-status active">Aktywny</span></td>
+                    <td class="text-end"><button class="btn-icon"><i class="bi bi-pencil"></i></button> <button class="btn-icon"><i class="bi bi-envelope"></i></button> <button class="btn-icon danger"><i class="bi bi-trash"></i></button></td>
+                </tr>
+                <tr>
+                    <td class="text-muted">007</td>
+                    <td><div class="d-flex align-items-center gap-2"><span class="avatar avatar-sm">JL</span><div><div class="fw-semibold">Jakub Lewandowski</div><div class="small text-muted">Zakopane</div></div></div></td>
+                    <td>Agent</td>
+                    <td>j.lewandowski@nieruchomosciPro.pl</td>
+                    <td>+48 600 100 206</td>
+                    <td><strong>720 000 zł</strong></td>
+                    <td><span class="badge-status away">Spotkanie</span></td>
+                    <td class="text-end"><button class="btn-icon"><i class="bi bi-pencil"></i></button> <button class="btn-icon"><i class="bi bi-envelope"></i></button> <button class="btn-icon danger"><i class="bi bi-trash"></i></button></td>
+                </tr>
+                <tr>
+                    <td class="text-muted">008</td>
+                    <td><div class="d-flex align-items-center gap-2"><span class="avatar avatar-sm">EK</span><div><div class="fw-semibold">Ewa Kamińska</div><div class="small text-muted">Kraków</div></div></div></td>
+                    <td>Asystentka</td>
+                    <td>e.kaminska@nieruchomosciPro.pl</td>
+                    <td>+48 600 100 207</td>
+                    <td>—</td>
+                    <td><span class="badge-status offline">Offline</span></td>
+                    <td class="text-end"><button class="btn-icon"><i class="bi bi-pencil"></i></button> <button class="btn-icon"><i class="bi bi-envelope"></i></button> <button class="btn-icon danger"><i class="bi bi-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-head" style="border-bottom: none; border-top: 1px solid var(--border);">
+        <span class="text-muted small">Pokazano 8 z 28 pracowników</span>
+        <nav>
+            <ul class="pagination pagination-sm mb-0">
+                <li class="page-item disabled"><a class="page-link" href="#">‹</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">›</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

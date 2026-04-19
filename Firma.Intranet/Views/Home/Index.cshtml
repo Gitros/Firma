@@ -1,0 +1,143 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    ViewData["Subtitle"] = "Witaj z powrotem, Jan! Oto dzisiejsze podsumowanie.";
+}
+
+<!-- Stat tiles -->
+<div class="row g-3 mb-4">
+    <div class="col-sm-6 col-xl-3">
+        <div class="tile">
+            <div class="tile-head">
+                <div class="tile-icon bg-blue"><i class="bi bi-cart-check-fill"></i></div>
+                <span class="tile-trend up"><i class="bi bi-arrow-up"></i> 12.5%</span>
+            </div>
+            <div class="tile-value">128</div>
+            <div class="tile-label">Aktywne transakcje</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="tile">
+            <div class="tile-head">
+                <div class="tile-icon bg-green"><i class="bi bi-people-fill"></i></div>
+                <span class="tile-trend up"><i class="bi bi-arrow-up"></i> 8.3%</span>
+            </div>
+            <div class="tile-value">2 547</div>
+            <div class="tile-label">Klienci w bazie</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="tile">
+            <div class="tile-head">
+                <div class="tile-icon bg-amber"><i class="bi bi-house-fill"></i></div>
+                <span class="tile-trend down"><i class="bi bi-arrow-down"></i> 2.1%</span>
+            </div>
+            <div class="tile-value">352</div>
+            <div class="tile-label">Aktywne oferty</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="tile">
+            <div class="tile-head">
+                <div class="tile-icon bg-cyan"><i class="bi bi-cash-stack"></i></div>
+                <span class="tile-trend up"><i class="bi bi-arrow-up"></i> 18.7%</span>
+            </div>
+            <div class="tile-value">1.2 mln</div>
+            <div class="tile-label">Przychód m-c (zł)</div>
+        </div>
+    </div>
+</div>
+
+<!-- Activity + Tasks -->
+<div class="row g-3">
+    <div class="col-lg-7">
+        <div class="panel">
+            <div class="panel-head">
+                <h5><i class="bi bi-activity me-2 text-primary"></i>Ostatnia aktywność</h5>
+                <a href="#" class="text-decoration-none small">Zobacz wszystkie <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="panel-body">
+                <div class="activity-item">
+                    <div class="activity-dot"><i class="bi bi-check-circle-fill"></i></div>
+                    <div>
+                        <div class="activity-text"><strong>Anna Kowalska</strong> sfinalizowała sprzedaż mieszkania przy ul. Krakowskiej 45</div>
+                        <div class="activity-time">12 min temu · Kraków · 685 000 zł</div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-dot" style="background: rgba(245,158,11,0.12); color: var(--warning);"><i class="bi bi-person-plus-fill"></i></div>
+                    <div>
+                        <div class="activity-text">Nowy klient <strong>Tomasz Nowak</strong> zarejestrowany w systemie</div>
+                        <div class="activity-time">1 godz. temu · źródło: formularz online</div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-dot" style="background: rgba(6,182,212,0.12); color: var(--info);"><i class="bi bi-house-add-fill"></i></div>
+                    <div>
+                        <div class="activity-text"><strong>Piotr Wiśniewski</strong> dodał nową ofertę: Dom 180m² w Biegonicach</div>
+                        <div class="activity-time">2 godz. temu · 1 250 000 zł</div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-dot" style="background: rgba(239,68,68,0.12); color: var(--danger);"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                    <div>
+                        <div class="activity-text">Wygasa umowa najmu lokalu <strong>OF-2024-0145</strong></div>
+                        <div class="activity-time">3 godz. temu · do akcji za 14 dni</div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-dot"><i class="bi bi-calendar-check-fill"></i></div>
+                    <div>
+                        <div class="activity-text"><strong>Katarzyna Zając</strong> umówiła oględziny: ul. Mostowa 12</div>
+                        <div class="activity-time">wczoraj · 2026-04-19 14:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="panel">
+            <div class="panel-head">
+                <h5><i class="bi bi-list-task me-2 text-primary"></i>Nadchodzące zadania</h5>
+                <button class="btn-icon"><i class="bi bi-plus-lg"></i></button>
+            </div>
+            <div class="panel-body">
+                <div class="task-item">
+                    <div class="task-prio high"></div>
+                    <div class="flex-grow-1">
+                        <div class="task-title">Podpisanie aktu notarialnego — Wójcik</div>
+                        <div class="task-meta"><i class="bi bi-clock"></i> Dziś, 16:00 · Notariusz Kowalik</div>
+                    </div>
+                    <span class="badge-status active">PILNE</span>
+                </div>
+                <div class="task-item">
+                    <div class="task-prio med"></div>
+                    <div class="flex-grow-1">
+                        <div class="task-title">Wycena nieruchomości — ul. Lwowska 8</div>
+                        <div class="task-meta"><i class="bi bi-calendar"></i> Jutro, 10:30</div>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <div class="task-prio med"></div>
+                    <div class="flex-grow-1">
+                        <div class="task-title">Sesja zdjęciowa apartamentu — Kraków</div>
+                        <div class="task-meta"><i class="bi bi-calendar"></i> 22 kwietnia, 12:00</div>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <div class="task-prio low"></div>
+                    <div class="flex-grow-1">
+                        <div class="task-title">Comiesięczny raport sprzedaży</div>
+                        <div class="task-meta"><i class="bi bi-calendar"></i> 30 kwietnia</div>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <div class="task-prio low"></div>
+                    <div class="flex-grow-1">
+                        <div class="task-title">Aktualizacja zdjęć ofert (Q2)</div>
+                        <div class="task-meta"><i class="bi bi-calendar"></i> 5 maja</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

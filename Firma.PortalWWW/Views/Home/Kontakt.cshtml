@@ -1,0 +1,153 @@
+@{
+    ViewData["Title"] = "Kontakt";
+}
+
+<section class="page-header">
+    <div class="container">
+        <span class="breadcrumb-text">Strona główna · Kontakt</span>
+        <h1 class="mt-2">Skontaktuj się z nami</h1>
+        <p class="lead text-white-50 mb-0">Odpowiadamy w ciągu 2 godzin w dni robocze</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-5">
+                <div class="contact-info-card">
+                    <h3>Dane kontaktowe</h3>
+                    <p style="color: rgba(255,255,255,0.75);">Wybierz najwygodniejszy dla siebie sposób kontaktu. Jesteśmy do Twojej dyspozycji.</p>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div class="info-text">
+                            <strong>Biuro główne</strong>
+                            ul. Krakowska 12<br />33-300 Nowy Sącz
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="bi bi-telephone-fill"></i></div>
+                        <div class="info-text">
+                            <strong>Telefon</strong>
+                            +48 18 123 45 67<br />+48 600 700 800
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="bi bi-envelope-fill"></i></div>
+                        <div class="info-text">
+                            <strong>E-mail</strong>
+                            kontakt@nieruchomosciPro.pl<br />biuro@nieruchomosciPro.pl
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="bi bi-clock-fill"></i></div>
+                        <div class="info-text">
+                            <strong>Godziny otwarcia</strong>
+                            Pn - Pt: 9:00 - 18:00<br />Sobota: 10:00 - 14:00
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <strong style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">Znajdź nas także na:</strong>
+                        <div class="social-icons mt-2">
+                            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="contact-form-card">
+                    <h3>Wyślij wiadomość</h3>
+                    <p class="text-muted">Wypełnij formularz, a nasz konsultant skontaktuje się z Tobą w ciągu 2 godzin.</p>
+
+                    <form>
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-6">
+                                <label class="form-label">Imię i nazwisko *</label>
+                                <input type="text" class="form-control" placeholder="Jan Kowalski" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Telefon</label>
+                                <input type="tel" class="form-control" placeholder="+48 600 000 000" />
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">E-mail *</label>
+                                <input type="email" class="form-control" placeholder="jan@example.com" />
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Temat zapytania</label>
+                                <select class="form-select">
+                                    <option>Wybierz...</option>
+                                    <option>Sprzedaż nieruchomości</option>
+                                    <option>Wynajem</option>
+                                    <option>Wycena</option>
+                                    <option>Doradztwo inwestycyjne</option>
+                                    <option>Inne</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Wiadomość *</label>
+                                <textarea class="form-control" rows="5" placeholder="Opisz krótko, w czym możemy pomóc..."></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rodo" />
+                                    <label class="form-check-label small text-muted" for="rodo">
+                                        Wyrażam zgodę na przetwarzanie danych osobowych zgodnie z polityką prywatności *
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-brand btn-lg"><i class="bi bi-send-fill me-2"></i>Wyślij wiadomość</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- mapa placeholder -->
+<section class="section section-light">
+    <div class="container">
+        <div class="section-title">
+            <span class="eyebrow">Znajdź nas</span>
+            <h2>Nasze biura</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="value-card">
+                    <i class="bi bi-geo-alt-fill icon-big"></i>
+                    <h5>Nowy Sącz</h5>
+                    <p class="text-muted small">ul. Krakowska 12<br />Pn-Pt 9-18</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="value-card">
+                    <i class="bi bi-geo-alt-fill icon-big"></i>
+                    <h5>Kraków</h5>
+                    <p class="text-muted small">ul. Mostowa 5<br />Pn-Pt 9-19</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="value-card">
+                    <i class="bi bi-geo-alt-fill icon-big"></i>
+                    <h5>Tarnów</h5>
+                    <p class="text-muted small">Rynek 8<br />Pn-Pt 10-17</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="value-card">
+                    <i class="bi bi-geo-alt-fill icon-big"></i>
+                    <h5>Zakopane</h5>
+                    <p class="text-muted small">ul. Krupówki 22<br />Pn-Pt 10-18</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
