@@ -1,0 +1,60 @@
+@model Firma.Data.CRM.Oferta
+@{ ViewData["Title"] = "Nowa oferta"; }
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-plus-lg me-2"></i>Nowa oferta</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger d-none"></div>
+                        <div class="mb-3">
+                            <label asp-for="DataWystawienia" class="form-label fw-semibold"></label>
+                            <input asp-for="DataWystawienia" class="form-control" type="date" />
+                            <span asp-validation-for="DataWystawienia" class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Status" class="form-label fw-semibold"></label>
+                            <select asp-for="Status" class="form-select">
+                                <option value="">-- wybierz status --</option>
+                                <option value="Aktywna">Aktywna</option>
+                                <option value="Zarezerwowana">Zarezerwowana</option>
+                                <option value="Sprzedana">Sprzedana</option>
+                                <option value="Wycofana">Wycofana</option>
+                            </select>
+                            <span asp-validation-for="Status" class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Cena" class="form-label fw-semibold"></label>
+                            <input asp-for="Cena" class="form-control" />
+                            <span asp-validation-for="Cena" class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="IdNieruchomosci" class="form-label fw-semibold"></label>
+                            <select asp-for="IdNieruchomosci" asp-items="ViewBag.IdNieruchomosci" class="form-select">
+                                <option value="">-- wybierz nieruchomość --</option>
+                            </select>
+                            <span asp-validation-for="IdNieruchomosci" class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="IdPracownika" class="form-label fw-semibold"></label>
+                            <select asp-for="IdPracownika" asp-items="ViewBag.IdPracownika" class="form-select">
+                                <option value="">-- wybierz agenta --</option>
+                            </select>
+                            <span asp-validation-for="IdPracownika" class="text-danger small"></span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-floppy me-1"></i>Zapisz</button>
+                            <a asp-action="Index" class="btn btn-outline-secondary">Anuluj</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts { @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); } }

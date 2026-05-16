@@ -1,6 +1,8 @@
 @{
+    var ctrl = ViewContext.RouteData.Values["controller"]?.ToString();
     var act = ViewContext.RouteData.Values["action"]?.ToString();
-    string Active(string a) => act == a ? "active" : "";
+    string Active(string a) => act == a && ctrl == "Home" ? "active" : "";
+    string ActiveCtrl(string c) => ctrl == c ? "active" : "";
 }
 <!DOCTYPE html>
 <html lang="pl">
@@ -28,6 +30,17 @@
                 <a class="nav-link @Active("Index")" asp-controller="Home" asp-action="Index"><i class="bi bi-grid-1x2-fill"></i> Dashboard</a>
                 <a class="nav-link @Active("Pracownicy")" asp-controller="Home" asp-action="Pracownicy"><i class="bi bi-people-fill"></i> Pracownicy</a>
                 <a class="nav-link @Active("Raporty")" asp-controller="Home" asp-action="Raporty"><i class="bi bi-bar-chart-fill"></i> Raporty</a>
+                <div class="nav-section mt-3">CMS</div>
+                <a class="nav-link @ActiveCtrl("Aktualnosc")" asp-controller="Aktualnosc" asp-action="Index"><i class="bi bi-newspaper"></i> Aktualności</a>
+                <a class="nav-link @ActiveCtrl("Strona")" asp-controller="Strona" asp-action="Index"><i class="bi bi-file-text"></i> Strony</a>
+                <div class="nav-section mt-3">Nieruchomości</div>
+                <a class="nav-link @ActiveCtrl("TypNieruchomosci")" asp-controller="TypNieruchomosci" asp-action="Index"><i class="bi bi-tags"></i> Typy</a>
+                <a class="nav-link @ActiveCtrl("Nieruchomosc")" asp-controller="Nieruchomosc" asp-action="Index"><i class="bi bi-house-door"></i> Nieruchomości</a>
+                <div class="nav-section mt-3">CRM</div>
+                <a class="nav-link @ActiveCtrl("Klient")" asp-controller="Klient" asp-action="Index"><i class="bi bi-person-lines-fill"></i> Klienci</a>
+                <a class="nav-link @ActiveCtrl("Pracownik")" asp-controller="Pracownik" asp-action="Index"><i class="bi bi-people"></i> Pracownicy</a>
+                <a class="nav-link @ActiveCtrl("Oferta")" asp-controller="Oferta" asp-action="Index"><i class="bi bi-clipboard-check"></i> Oferty</a>
+                <a class="nav-link @ActiveCtrl("Umowa")" asp-controller="Umowa" asp-action="Index"><i class="bi bi-file-earmark-text"></i> Umowy</a>
                 <div class="nav-section mt-3">System</div>
                 <a class="nav-link @Active("Ustawienia")" asp-controller="Home" asp-action="Ustawienia"><i class="bi bi-gear-fill"></i> Ustawienia</a>
                 <a class="nav-link" href="#"><i class="bi bi-question-circle-fill"></i> Pomoc</a>
@@ -58,6 +71,17 @@
                     <a class="nav-link @Active("Index")" asp-controller="Home" asp-action="Index"><i class="bi bi-grid-1x2-fill"></i> Dashboard</a>
                     <a class="nav-link @Active("Pracownicy")" asp-controller="Home" asp-action="Pracownicy"><i class="bi bi-people-fill"></i> Pracownicy</a>
                     <a class="nav-link @Active("Raporty")" asp-controller="Home" asp-action="Raporty"><i class="bi bi-bar-chart-fill"></i> Raporty</a>
+                    <div class="nav-section mt-3">CMS</div>
+                    <a class="nav-link @ActiveCtrl("Aktualnosc")" asp-controller="Aktualnosc" asp-action="Index"><i class="bi bi-newspaper"></i> Aktualności</a>
+                    <a class="nav-link @ActiveCtrl("Strona")" asp-controller="Strona" asp-action="Index"><i class="bi bi-file-text"></i> Strony</a>
+                    <div class="nav-section mt-3">Nieruchomości</div>
+                    <a class="nav-link @ActiveCtrl("TypNieruchomosci")" asp-controller="TypNieruchomosci" asp-action="Index"><i class="bi bi-tags"></i> Typy</a>
+                    <a class="nav-link @ActiveCtrl("Nieruchomosc")" asp-controller="Nieruchomosc" asp-action="Index"><i class="bi bi-house-door"></i> Nieruchomości</a>
+                    <div class="nav-section mt-3">CRM</div>
+                    <a class="nav-link @ActiveCtrl("Klient")" asp-controller="Klient" asp-action="Index"><i class="bi bi-person-lines-fill"></i> Klienci</a>
+                    <a class="nav-link @ActiveCtrl("Pracownik")" asp-controller="Pracownik" asp-action="Index"><i class="bi bi-people"></i> Pracownicy</a>
+                    <a class="nav-link @ActiveCtrl("Oferta")" asp-controller="Oferta" asp-action="Index"><i class="bi bi-clipboard-check"></i> Oferty</a>
+                    <a class="nav-link @ActiveCtrl("Umowa")" asp-controller="Umowa" asp-action="Index"><i class="bi bi-file-earmark-text"></i> Umowy</a>
                     <div class="nav-section mt-3">System</div>
                     <a class="nav-link @Active("Ustawienia")" asp-controller="Home" asp-action="Ustawienia"><i class="bi bi-gear-fill"></i> Ustawienia</a>
                 </nav>

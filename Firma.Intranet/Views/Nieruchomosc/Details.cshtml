@@ -1,0 +1,38 @@
+@model Firma.Data.Nieruchomosci.Nieruchomosc
+@{ ViewData["Title"] = "Szczegóły nieruchomości"; }
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0"><i class="bi bi-eye me-2"></i>Szczegóły nieruchomości</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Tytul)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(m => m.Tytul)</dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Adres)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(m => m.Adres)</dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Cena)</dt>
+                        <dd class="col-sm-8">@Model.Cena.ToString("C")</dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Powierzchnia)</dt>
+                        <dd class="col-sm-8">@Model.Powierzchnia m²</dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.LiczbaIzb)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(m => m.LiczbaIzb)</dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.FotoURL)</dt>
+                        <dd class="col-sm-8"><a href="@Model.FotoURL" target="_blank">@Model.FotoURL</a></dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Opis)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(m => m.Opis)</dd>
+                        <dt class="col-sm-4">Typ nieruchomości</dt>
+                        <dd class="col-sm-8">@Model.TypNieruchomosci?.Nazwa</dd>
+                    </dl>
+                    <div class="d-flex gap-2 mt-3">
+                        <a asp-action="Edit" asp-route-id="@Model.IdNieruchomosci" class="btn btn-warning btn-sm"><i class="bi bi-pencil-square me-1"></i>Edytuj</a>
+                        <a asp-action="Index" class="btn btn-outline-secondary btn-sm"><i class="bi bi-list-ul me-1"></i>Wróć</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

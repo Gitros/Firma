@@ -24,6 +24,7 @@ namespace Firma.Data.Nieruchomosci
         public decimal Cena { get; set; }
 
         [Required]
+        [Column(TypeName = "decimal(10,2)")]
         [Display(Name = "Powierzchnia (m²)")]
         public decimal Powierzchnia { get; set; }
 

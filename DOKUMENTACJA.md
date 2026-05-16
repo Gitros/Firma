@@ -306,3 +306,25 @@ Stopka formularza: Anuluj | Resetuj | Zapisz zmiany
 | jquery-validation-unobtrusive | bundled | integracja z ASP.NET MVC validation |
 
 > Brak zewnętrznych CDN — wszystkie zasoby serwowane lokalnie.
+
+Mechanizm ASP.NET MVC — pozwala widokom wstrzykiwać własne skrypty JS na koniec <body>.
+
+W _Layout.cshtml (deklaracja miejsca):
+
+@await RenderSectionAsync("Scripts", required: false)
+"Jeśli jakiś widok zadeklaruje sekcję Scripts, wstaw ją tutaj."
+required: false = widok bez tej sekcji nie rzuca błędu.
+
+W widoku (opcjonalne użycie):
+
+@section Scripts {
+    <script>
+        console.log("tylko na tej stronie");
+    </script>
+}
+Po co — jQuery Validation działa tak właśnie. Np. gdybyś dodał walidację formularza tylko na stronie Kontakt, wstawiasz tam:
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+I skrypty validacji ładują się tylko na tej stronie, nie na każdej.

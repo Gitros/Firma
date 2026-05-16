@@ -1,0 +1,26 @@
+@model Firma.Data.Nieruchomosci.TypNieruchomosci
+@{ ViewData["Title"] = "Szczegóły typu nieruchomości"; }
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0"><i class="bi bi-eye me-2"></i>Szczegóły typu nieruchomości</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Nazwa)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(m => m.Nazwa)</dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Opis)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(m => m.Opis)</dd>
+                    </dl>
+                    <div class="d-flex gap-2 mt-3">
+                        <a asp-action="Edit" asp-route-id="@Model.IdTypu" class="btn btn-warning btn-sm"><i class="bi bi-pencil-square me-1"></i>Edytuj</a>
+                        <a asp-action="Index" class="btn btn-outline-secondary btn-sm"><i class="bi bi-list-ul me-1"></i>Wróć</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

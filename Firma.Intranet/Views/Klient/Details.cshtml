@@ -1,0 +1,32 @@
+@model Firma.Data.CRM.Klient
+@{ ViewData["Title"] = "Szczegóły klienta"; }
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0"><i class="bi bi-eye me-2"></i>Szczegóły klienta</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Imie)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(m => m.Imie)</dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Nazwisko)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(m => m.Nazwisko)</dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Email)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(m => m.Email)</dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Telefon)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(m => m.Telefon)</dd>
+                        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.DataRejestracji)</dt>
+                        <dd class="col-sm-8">@Model.DataRejestracji.ToString("dd.MM.yyyy")</dd>
+                    </dl>
+                    <div class="d-flex gap-2 mt-3">
+                        <a asp-action="Edit" asp-route-id="@Model.IdKlienta" class="btn btn-warning btn-sm"><i class="bi bi-pencil-square me-1"></i>Edytuj</a>
+                        <a asp-action="Index" class="btn btn-outline-secondary btn-sm"><i class="bi bi-list-ul me-1"></i>Wróć</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

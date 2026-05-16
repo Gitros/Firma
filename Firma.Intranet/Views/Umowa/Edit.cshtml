@@ -1,0 +1,56 @@
+@model Firma.Data.CRM.Umowa
+@{ ViewData["Title"] = "Edytuj umowę"; }
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="mb-0"><i class="bi bi-pencil-square me-2"></i>Edytuj umowę</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit">
+                        <input type="hidden" asp-for="IdUmowy" />
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger d-none"></div>
+                        <div class="mb-3">
+                            <label asp-for="DataPodpisania" class="form-label fw-semibold"></label>
+                            <input asp-for="DataPodpisania" class="form-control" type="date" />
+                            <span asp-validation-for="DataPodpisania" class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="TypUmowy" class="form-label fw-semibold"></label>
+                            <select asp-for="TypUmowy" class="form-select">
+                                <option value="Kupno-Sprzedaż">Kupno-Sprzedaż</option>
+                                <option value="Najem">Najem</option>
+                                <option value="Dzierżawa">Dzierżawa</option>
+                                <option value="Pośrednictwo">Pośrednictwo</option>
+                            </select>
+                            <span asp-validation-for="TypUmowy" class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="WartoscUmowy" class="form-label fw-semibold"></label>
+                            <input asp-for="WartoscUmowy" class="form-control" />
+                            <span asp-validation-for="WartoscUmowy" class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="IdKlienta" class="form-label fw-semibold"></label>
+                            <select asp-for="IdKlienta" asp-items="ViewBag.IdKlienta" class="form-select"></select>
+                            <span asp-validation-for="IdKlienta" class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Uwagi" class="form-label fw-semibold"></label>
+                            <textarea asp-for="Uwagi" class="form-control" rows="3"></textarea>
+                            <span asp-validation-for="Uwagi" class="text-danger small"></span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-warning"><i class="bi bi-floppy me-1"></i>Zapisz</button>
+                            <a asp-action="Index" class="btn btn-outline-secondary">Anuluj</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts { @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); } }
